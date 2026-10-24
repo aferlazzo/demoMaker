@@ -1,0 +1,16 @@
+✔ first scene plan introduces demoMaker itself in 80 seconds (3.9935ms)
+✔ example runs 72 seconds and preserves closing line (0.4699ms)
+✔ scene boundaries and end clamp (0.427ms)
+✔ captions cover scene timing without overlap; partial export clips final cue (1.3816ms)
+✔ project rejects empty and invalid durations (0.8307ms)
+✔ download names cannot escape a filename (0.8523ms)
+✔ local server converts a generated codec test clip to playable H.264/AAC MP4 and rejects foreign origins (3080.4289ms)
+✔ both export layouts preserve H.264/AAC, captions, masks and source content (4919.3661ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5240.9177

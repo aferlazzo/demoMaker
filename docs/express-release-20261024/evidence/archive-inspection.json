@@ -1,0 +1,41 @@
+{
+  "identity": {
+    "Name": "demoMaker.InternalPreview",
+    "ProcessorArchitecture": "x64",
+    "Publisher": "CN=demoMaker Internal Preview",
+    "Version": "1.3.2.0"
+  },
+  "unsigned_test_identity": true,
+  "payload_files": 2824,
+  "package_sha256": "928f4a706cedd50c4d57f7820a7c37d1d99d90c7a97c58a5f6055b12e8e8ba0d",
+  "runtime_matches_unpacked": [
+    {
+      "file": "resources/app.asar",
+      "sha256": "e8d9a9a771197cbd17f23c3e4d71374fc122028f9683873d7a5c7cd1dc905533",
+      "matches_unpacked": true
+    },
+    {
+      "file": "resources/app.asar.unpacked/node_modules/ffmpeg-static/ffmpeg.exe",
+      "sha256": "e9fd5e711debab9d680955fc1e38a2c1160fd280b144476cc3f62bc43ef49db1",
+      "matches_unpacked": true
+    },
+    {
+      "file": "resources/speech/python/python.exe",
+      "sha256": "4d6f5f81a4bca11191c4c7c6b43632694d0a4ce74e068619d8fdc161d469859a",
+      "matches_unpacked": true
+    },
+    {
+      "file": "resources/speech/python/python312.dll",
+      "sha256": "9a0e3435aaa680d868150f87ab3e388ad2eebc22f87e036155c7b4eda8cd2120",
+      "matches_unpacked": true
+    },
+    {
+      "file": "resources/speech/piper-voices/en_US-ljspeech-high.onnx",
+      "sha256": "5d4f08ba6a2a48c44592eed3ce56bf85e9de3dd4e20df90541ae68a8310c029a",
+      "matches_unpacked": true
+    }
+  ],
+  "branded_tiles_match_source": true,
+  "installed": false,
+  "store_certified": false
+}

@@ -21,9 +21,14 @@
 6. Added an explicit import-only desktop packaging smoke mode using already-public footage and an isolated test profile. It does not capture the owner's desktop or microphone. Real narration and both imported-video exports passed in the source desktop runtime.
 7. Prepared conditional listing/support/privacy copy and a component-level licensing review. These are drafts, not owner-approved legal terms.
 
-## Final verification in progress
+## Final verification completed
 
-Commit intended source, build the private candidate from that clean commit using `scripts/build-store-preview.ps1`, and repeat import-only smoke against its actual unpacked executable. Save final package hash and measured test results in `docs/express-release-20261024/TEST-AND-PACKAGE-REPORT.md`. The unsigned test identity must never be represented as upload-ready or Store-certified.
+- Built private candidate from clean commit `24870d2f2aff1caa6122adf307a942dbb2cd5fef` using `scripts/build-store-preview.ps1`. The subsequent checkpoint changes documentation/evidence only; application sources remain that build's sources.
+- Official Windows SDK MakeAppx validated and assembled the unsigned AppX. electron-builder's helper itself returned 1; its staged payload was successfully assembled by the installed SDK. No helper failure is being counted as a pass.
+- Candidate: 378,778,954 bytes; SHA-256 `928f4a706cedd50c4d57f7820a7c37d1d99d90c7a97c58a5f6055b12e8e8ba0d`. Identity `demoMaker.InternalPreview`; **NOT FOR SALE**, not signed/installed/Store-certified.
+- Actual unpacked executable passed import-only smoke with only Windows system directories on PATH: UI, 5.535-second local narration, standard 1280×900 and Reel 1080×1920 MP4s. Both H.264/AAC files fully decoded. Runtime payload hashes match the AppX archive; branded tiles match committed assets.
+- Eight regressions and one real Piper integration passed; final npm audit zero known vulnerabilities. Final report/evidence: `docs/express-release-20261024/TEST-AND-PACKAGE-REPORT.md` and its `evidence/` folder.
+- Conditional listing/support/privacy materials and an actual app screenshot saved; final commercial assets still require the approved signed release. No paid product was published and no sale was achieved.
 
 ## Blockers / limits
 

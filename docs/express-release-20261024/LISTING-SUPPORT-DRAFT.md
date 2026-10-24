@@ -34,4 +34,6 @@ Editing, rendering and bundled narration run locally. The local server binds to 
 
 Use actual current application screenshots and actual captioned standard/Reel outputs from the verified workflow. Label preview evidence internally. Never use a mocked Store badge, fake reviews, purchase counts, five-star rating or an image implying unimplemented editing tools. Branded package tiles are derived deterministically from the existing `desktop/icon.png`.
 
+Prepared: [actual application preview](assets/application-preview.png), captured from the tested unpacked preview. Standard/Reel verification frames and output files are saved privately as test evidence. The reused source already contains captions, so those test outputs intentionally show two caption layers and must not be used as polished listing screenshots. These are not certified Express screenshots.
+
 Before submission, capture final screenshots from the correctly identified signed release on a supported clean Windows installation, publish approved support/privacy pages using existing hosting, confirm all URLs, and include test instructions for local narration/capture/export. The current private candidate must not be uploaded as a paid product.

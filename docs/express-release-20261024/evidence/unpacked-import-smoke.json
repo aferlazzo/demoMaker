@@ -1,0 +1,46 @@
+{
+  "ui": {
+    "title": "demoMaker — record the real thing",
+    "format": true,
+    "guided": true,
+    "capture": "function"
+  },
+  "desktopCapture": {
+    "ok": false,
+    "skipped": true,
+    "reason": "Import-only packaging check: no desktop or microphone capture."
+  },
+  "source": {
+    "kind": "imported public SoHelpMe recording",
+    "screenRecordingTested": false
+  },
+  "narration": {
+    "duration": 5.534557823129251,
+    "cues": [
+      {
+        "start": 0,
+        "end": 1.2654875283446712,
+        "text": "Welcome to demoMaker."
+      },
+      {
+        "start": 1.4254875283446713,
+        "end": 5.0245804988662135,
+        "text": "Create a clear demonstration, then share your finished video."
+      }
+    ]
+  },
+  "exports": [
+    {
+      "format": "standard",
+      "file": "standard.mp4",
+      "bytes": 228875,
+      "decoded": true
+    },
+    {
+      "format": "reel",
+      "file": "reel.mp4",
+      "bytes": 274436,
+      "decoded": true
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "checked_at_utc": "2026-10-24T22:44:29.817Z",
+  "passed": true,
+  "checks": [
+    {
+      "name": "gallery",
+      "url": "https://aferlazzo.github.io/demoMaker/",
+      "status": 200,
+      "matched_expected_copy": true
+    },
+    {
+      "name": "interest",
+      "url": "https://aferlazzo.github.io/demoMaker/express/",
+      "status": 200,
+      "matched_expected_copy": true
+    },
+    {
+      "name": "DemoStudio-Demo.mp4",
+      "url": "https://aferlazzo.github.io/demoMaker/media/DemoStudio-Demo.mp4",
+      "status": 200,
+      "bytes": 4181662,
+      "sha256": "2fded42c52c7c5b0ef7ff429688807bf11647423e5f1c76c5e0ccdc87cbe70b1",
+      "matches_committed_media": true,
+      "range_status": 206,
+      "full_decode": true,
+      "video": "h264",
+      "audio": "aac"
+    },
+    {
+      "name": "SoHelpMe-Demo.mp4",
+      "url": "https://aferlazzo.github.io/demoMaker/media/SoHelpMe-Demo.mp4",
+      "status": 200,
+      "bytes": 2103035,
+      "sha256": "d8046cb587e916b07f0982f46dc16197c2bb5f74d334bec07e6d1ba99260a6ba",
+      "matches_committed_media": true,
+      "range_status": 206,
+      "full_decode": true,
+      "video": "h264",
+      "audio": "aac"
+    }
+  ],
+  "limits": [
+    "Browser playback separately observed in IAB; no subjective audio-quality claim.",
+    "Interest mailto not activated; no email sent, draft created, order or payment attempted.",
+    "These checks do not measure page visitors, purchases or buyer intent."
+  ]
+}

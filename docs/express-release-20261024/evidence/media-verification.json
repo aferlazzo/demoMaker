@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "exports": [
+    {
+      "format": "standard",
+      "dimensions": "1280x900",
+      "video": "h264",
+      "audio": "aac",
+      "full_decode": true,
+      "bytes": 228875
+    },
+    {
+      "format": "reel",
+      "dimensions": "1080x1920",
+      "video": "h264",
+      "audio": "aac",
+      "full_decode": true,
+      "bytes": 274436
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "installed": false,
+  "builder_exit": 1,
+  "uses_existing_sdk": true,
+  "store_certified": false,
+  "identity": "demoMaker.InternalPreview",
+  "package_sha256": "928f4a706cedd50c4d57f7820a7c37d1d99d90c7a97c58a5f6055b12e8e8ba0d",
+  "not_for_sale": true,
+  "publisher": "CN=demoMaker Internal Preview",
+  "source_commit": "24870d2f2aff1caa6122adf307a942dbb2cd5fef",
+  "signed": false,
+  "package_bytes": 378778954,
+  "checked_at_utc": "2026-10-24T22:51:44.1280956Z",
+  "sdk_pack_passed": true
+}

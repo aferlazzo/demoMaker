@@ -1,6 +1,15 @@
 # Express readiness verification — October 24, 2026
 
-This is a private feasibility test of the existing free application, not a new paid release. Baseline main: `c57bd07af8bcd427625d881f16c32f8c6d9a3b7c`. Source branch: `codex/express-store-readiness`. Final package evidence will be appended after the committed-source build.
+This is a private feasibility test of the existing free application, not a new paid release. Baseline main: `c57bd07af8bcd427625d881f16c32f8c6d9a3b7c`. Source branch: `codex/express-store-readiness`. Runtime build commit: `24870d2f2aff1caa6122adf307a942dbb2cd5fef`; subsequent checkpoint changes documentation/evidence only.
+
+## Final committed-source candidate
+
+- **SDK assembly/validation: PASS.** Installed Windows SDK MakeAppx reported `Package creation succeeded` with validation enabled. electron-builder's bundled helper returned 1; this was handled by the explicit installed-SDK path, not represented as a successful helper run.
+- `demoMaker-Store-Preview-1.3.2.appx`: **378,778,954 bytes**; SHA-256 **`928f4a706cedd50c4d57f7820a7c37d1d99d90c7a97c58a5f6055b12e8e8ba0d`**. Built October 24 at 22:51 UTC. Unsigned internal identity, **NOT FOR SALE**. Private owner artifact retained locally; not uploaded to a release or Store.
+- Archive inspected: 2,824 entries; manifest test identity confirmed; no AppxSignature.p7x. App ASAR, FFmpeg, Python executable/DLL and voice-model bytes match the tested unpacked payload; four tile assets match committed source. App main/smoke/server/media/browser source bytes also matched the clean checkout. Builder intentionally removes development/build package.json fields; production metadata matches.
+- **Actual unpacked executable: PASS, import-only.** Exit 0 with PATH limited to Windows/System32, no global Node/Python required. Guided interface initialized, bundled Piper generated 5.534557823-second narration with two timed cues, and both MP4s fully decoded. Standard: 228,875 bytes, 1280×900; Reel: 274,436 bytes, 1080×1920; both H.264/AAC. Actual app screenshot and post-fade output frames visually inspected.
+- These results are **not** signed AppX installation or microphone/display capture results. No certificate installed, unsigned package registered or security setting changed. See the failures/unverified rows below.
+- Sanitized machine evidence: [evidence/](evidence/). [Actual application preview](assets/application-preview.png) is preparation evidence, not an approved Store listing screenshot. Full logs, output media and the private candidate are retained in the owner's output folder.
 
 ## Completed checks
 
