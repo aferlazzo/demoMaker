@@ -3,6 +3,8 @@ const path=require('node:path');
 const fs=require('node:fs/promises');
 let mainWindow,picker,server,origin,selection;
 app.setName('demoMaker');
+// Keep automated packaging checks away from any existing user's app profile.
+if(process.env.DEMOMAKER_SMOKE_DIR){const testProfile=path.resolve(process.env.DEMOMAKER_SMOKE_DIR,'profile');require('node:fs').mkdirSync(testProfile,{recursive:true});app.setPath('userData',testProfile);}
 if(!app.requestSingleInstanceLock())app.quit();
 else {
 app.on('second-instance',()=>{if(mainWindow){mainWindow.restore();mainWindow.focus();}});
@@ -15,7 +17,7 @@ app.whenReady().then(async()=>{
   ({server}=await import('../server.mjs'));
   if(!server.listening)await new Promise((resolve,reject)=>{server.once('listening',resolve);server.once('error',reject);});
   origin=`http://127.0.0.1:${server.address().port}`;
-  mainWindow=new BrowserWindow({width:1400,height:960,minWidth:900,minHeight:650,title:'demoMaker',icon:path.join(__dirname,'icon.png'),webPreferences:{contextIsolation:true,nodeIntegration:false,sandbox:true,backgroundThrottling:false}});
+  mainWindow=new BrowserWindow({show:!process.env.DEMOMAKER_SMOKE_FIXTURE_ONLY,width:1400,height:960,minWidth:900,minHeight:650,title:'demoMaker',icon:path.join(__dirname,'icon.png'),webPreferences:{offscreen:!!process.env.DEMOMAKER_SMOKE_FIXTURE_ONLY,contextIsolation:true,nodeIntegration:false,sandbox:true,backgroundThrottling:false}});
   mainWindow.setMenuBarVisibility(false);
   const local=url=>{try{return new URL(url).origin===origin;}catch{return false;}};
   session.defaultSession.setPermissionCheckHandler((wc,permission,requestOrigin)=>wc===mainWindow.webContents&&local(requestOrigin)&&['media','display-capture'].includes(permission));
@@ -46,6 +48,7 @@ app.whenReady().then(async()=>{
     if(result)item.setSavePath(result);else item.cancel();
   });
   await mainWindow.loadURL(origin);
+  if(process.env.DEMOMAKER_SMOKE_FIXTURE_ONLY){mainWindow.webContents.setFrameRate(30);mainWindow.webContents.startPainting();}
   if(process.env.DEMOMAKER_SMOKE_DIR){
     try{const report=await require('./smoke.cjs').run(mainWindow,origin,process.env.DEMOMAKER_SMOKE_DIR);await fs.writeFile(path.join(process.env.DEMOMAKER_SMOKE_DIR,'installed-report.json'),JSON.stringify(report,null,2));app.exit(0);}
     catch(error){await fs.writeFile(path.join(process.env.DEMOMAKER_SMOKE_DIR,'installed-error.txt'),error.stack);app.exit(1);}

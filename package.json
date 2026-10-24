@@ -14,7 +14,7 @@
     "ffmpeg-static": "5.2.0"
   },
   "devDependencies": {
-    "electron": "42.0.0",
+    "electron": "42.11.18",
     "electron-builder": "26.15.0"
   },
   "main": "desktop/main.cjs",

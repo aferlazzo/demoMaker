@@ -11,7 +11,7 @@ Setup obtains dependencies from upstream distributions. Model weights, Python pa
 - [SoundFile](https://github.com/bastibe/python-soundfile): BSD-3-Clause wrapper. Consult its distribution for bundled libsndfile licenses.
 - [ffmpeg-static](https://github.com/eugeneware/ffmpeg-static), 5.2.0: GPL-3.0-or-later package. Installs an upstream executable. FFmpeg licensing depends on build configuration; inspect `ffmpeg -L` and upstream notices before redistributing a packaged runtime.
 
-This repository distributes app source and finished example MP4s, not an installer bundling these runtimes. Future runtime packaging must retain applicable licenses, notices, and source obligations.
+The repository also publishes a Windows installer bundling these runtimes (v1.3.2). Runtime packaging must retain applicable licenses, notices and source obligations. The earlier statement that no runtime installer was distributed was outdated. License notices and upstream homepage links alone do not establish that corresponding-source obligations for every exact binary have been discharged. A paid release is gated on a documented compliance review; see `docs/express-release-20261024/LICENSING-AND-STORE-GATES.md` on the readiness branch.
 
 
 Windows desktop packages also include Electron (MIT and Chromium notices), embedded CPython (PSF license), Piper and its dependencies (see bundled dist-info license files), FFmpeg (GPL build from ffmpeg-static), and the LJ Speech voice model (bundled MODEL_CARD). The full dependency notices ship with their runtime files. FFmpeg source/build instructions: https://github.com/eugeneware/ffmpeg-static and https://ffmpeg.org/download.html . Electron: https://github.com/electron/electron . CPython: https://www.python.org/downloads/source/ .

@@ -1,5 +1,7 @@
 # Windows desktop and Reels
 
+**Commercial readiness, October 24, 2026:** [STATUS.md](STATUS.md) records the Express evaluation and private Store packaging work. The [decision](docs/express-release-20261024/COMMERCIAL-DECISION.md) is VALIDATE / NOT READY: no verified Express sale or paid-only advantage has been established. The free release remains available; the internal package is not a Store-certified product. See [release gates](docs/express-release-20261024/LICENSING-AND-STORE-GATES.md) before distributing a commercial build.
+
 [Download the Windows x64 installer, demoMaker 1.3.2](https://github.com/aferlazzo/demoMaker/releases/download/v1.3.2/demoMaker-Setup-1.3.2.exe). It bundles its runtimes and local narration, launches from its desktop/Start menu icon, and exports standard landscape or vertical Reel MP4. See [WINDOWS.md](WINDOWS.md) for installation and [VERIFICATION.md](VERIFICATION.md) for test results and remaining limits.
 
 # demoMaker
