@@ -76,3 +76,11 @@ logs/
 .DS_Store
 Thumbs.db
 
+
+# Preserve authored packaging tools and artwork.
+!build/
+build/**
+!build/appx/
+!build/appx/*.png
+!build/store-preview.cjs
+
